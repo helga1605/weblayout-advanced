@@ -1,0 +1,239 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TTFirsNeue-Regular"), url("/fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("/fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TTFirsNeue-Bold"), url("/fonts/TTFirsNeue-Bold.woff2") format("woff2"), url("/fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoRegular"), url("/fonts/RobotoRegular.woff2") format("woff2"), url("/fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoBold"), url("/fonts/RobotoBold.woff2") format("woff2"), url("/fonts/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  min-width: 320px;
+  font-family: "TT Firs Neue", "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  max-width: 1290px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header-container {
+  margin: 0 auto;
+  margin-bottom: 41px;
+  max-width: 1920px;
+  min-height: 80px;
+  background-color: #202020;
+  align-items: center;
+}
+
+.header-box {
+  position: relative;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.header__img {
+  margin-right: 140px;
+  outline: 0;
+  height: auto;
+  width: 190px;
+  min-height: 30px;
+  flex-shrink: 0;
+}
+
+.form-container {
+  position: absolute;
+  right: 10px;
+  z-index: 100;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  min-width: 342px;
+}
+
+.header__form {
+  box-sizing: border-box;
+  width: 342px;
+  height: 30px;
+  align-items: center;
+  background: #202020;
+  opacity: 0;
+  display: none;
+  position: relative;
+  top: -3px;
+  right: -10px;
+  transform: translateY(-150%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.2s, visibility 0.3s ease-in-out 0.2s;
+  padding-left: 32px;
+  z-index: 120;
+}
+
+.form__active {
+  transform: translateY(5%);
+  opacity: 1;
+  display: flex;
+}
+
+.header768 {
+  display: none;
+}
+
+.header__nav {
+  margin-right: 193px;
+}
+
+.header320-list {
+  display: none;
+}
+
+.header-link {
+  color: #FFF;
+  font-size: 16px;
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 79px;
+}
+
+.header-link:hover {
+  color: #FF6E30;
+  outline: none;
+}
+
+.header-link:focus:not(:hover) {
+  background-color: #BC572B;
+  outline: none;
+}
+
+.header-link:active {
+  color: #CE4307;
+  outline: none;
+}
+
+.header__btn:focus-visible {
+  outline: none;
+}
+
+.search-input {
+  width: 308px;
+  border: none;
+  border-bottom: 1px solid #E9E9E9;
+  margin-right: 14px;
+  outline: 0;
+  color: #E9E9E9;
+  background: #202020;
+  font-family: TT Firs Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.search-input:focus-visible {
+  outline: 0;
+  border-bottom: 1px solid #FF6E30;
+}
+
+.search-input:hover:not(:focus-visible) {
+  outline: 0;
+  border-bottom: 1px solid #FF6E30;
+}
+
+.search-input:active:not(:focus-visible) {
+  outline: 0;
+  border-bottom: 1px solid #FF6E30;
+}
+
+.closed-search svg:focus-visible {
+  outline: #202020;
+}
