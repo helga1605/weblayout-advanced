@@ -130,7 +130,7 @@
 
 
   <main class="main">
-    <div class="photo">
+    <section class="photo">
       <div class="container grid2">
         <article class="photo__article">
           <div class="photo__article-tag">#мастеркласс</div>
@@ -149,13 +149,13 @@
           </ul>
         </section>
       </div>
-    </div>
+    </section>
 
-    <div class="about main__container">
-      <div class="container grid2">
+    <section class="about main__container">
+      <div class="container cont-320 flex">
         <div class="about__text">
           <h3 class="about__title">О&nbsp;студии</h3>
-          <div class="about__descr">
+          <p class="about__descr">
             В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно
             синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны:
             высокотехнологичная концепция общественного уклада требует от&nbsp;нас анализа соответствующих условий
@@ -165,40 +165,45 @@
             предполагает независимые способы реализации новых принципов формирования материально-технической
             и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только
             методом политического участия и&nbsp;нарушающими общечеловеческие нормы этики.
-          </div>
+          </p>
         </div>
 
-        <section class="about__section">
-          <ul class="about__list list-reset">
-            <li class="about__item about__item1"></li>
-            <li class="about__item about__item2">
+        <div class="about__section">
+          <div class="about__list">
+            <div class="about__item about__item1">
+              <picture>
+                <source media="(max-width: 576px)" srcset="../img/about_us_photo_320.jpg">
+                <source media="(max-width: 768px)" srcset="../img/about_us_photo_768.jpg">
+                <source media="(max-width: 1366px)" srcset="../img/about_us_photo_1024.jpg">
+                <img src="img/about_us_photo.jpg" alt="Фотоаппарат">
+              </picture>
+            </div>
+
+
+            <div class="about__item about__item2">
               <h3 class="subscribe">
                 Подписаться на&nbsp;рассылку
               </h3>
-              <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+              <form class="subscribe-form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
                 <input class="subscribe-mail form-mail" type="email" name="E-mail" placeholder="Email*" required>
+                <button class="about__btn orange-btn btn-reset">
+                  Отправить
+                </button>
               </form>
-            </li>
-            <li class="about__item about__item3">
-              <button class="about__btn orange-btn btn-reset">
-                Отправить
-              </button>
-            </li>
-          </ul>
-        </section>
-
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container projects">
+    <section class="container projects">
       <h3 class="project-title">Наши проекты</h3>
       <ul class="grid list-reset">
 
         <li class="item project1 project-img project1-img">
-          <div class="project-tag project1__tag ">#пейзаж</div>
-          <div class="project-text project1__text">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
-            до&nbsp;степени...</div>
-          <div class="project-text1024 project1__text1024">Синтетически, смешаны с&nbsp;не&nbsp;уникальными...</div>
+          <span class="project-tag project1__tag ">#пейзаж</span>
+          <p class="project-text project1__text">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
+            до&nbsp;степени...</p>
           <time class="project1__date" datetime="06-16">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_41399_325)">
@@ -217,10 +222,9 @@
         </li>
 
         <li class="item project2 project-img project2-img">
-          <div class="project-tag project2__tag">#портрет</div>
-          <div class="project-text project2__text">В&nbsp;своём стремлении улучшить опыт мы упускаем, что явные...
-          </div>
-          <div class="project-text1024 project2__text1024">В&nbsp;своём стремлении улучшить опыт&nbsp;мы...</div>
+          <span class="project-tag project2__tag">#портрет</span>
+          <p class="project-text project2__text">В&nbsp;своём стремлении улучшить опыт мы упускаем, что явные...
+          </p>
           <time class="project2__date" datetime="05-25">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_41399_325)">
@@ -239,10 +243,9 @@
         </li>
 
         <li class="item project3 project-img project3-img">
-          <div class="project-tag project3__tag">#предмет</div>
-          <div class="project-text project3__text">Равным образом, высокое качество позиционных...</div>
-          <div class="project-text1024 project3__text1024">Равным образом, высокое качество позиционных
-            высокотехнологичная концепция общественного уклада</div>
+          <span class="project-tag project3__tag">#предмет</span>
+          <p class="project-text project3__text">Равным образом, высокое качество позиционных
+            высокотехнологичная концепция общественного уклада</p>
           <time class="project3__date" datetime="05-14">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_41399_325)">
@@ -261,7 +264,7 @@
         </li>
 
         <li class="item project4 project4-img">
-          <div class="project-tag project4__tag">#fuji</div>
+          <span class="project-tag project4__tag">#fuji</span>
           <div class="project-wrapper">
             <time class="project4__date" datetime="04-09">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -286,7 +289,7 @@
         </li>
 
         <li class="item project5 project5-img">
-          <div class="project5__tag">#проектзабвение</div>
+          <span class="project5__tag">#проектзабвение</span>
           <div class="project-wrapper">
             <time class="project5__date" datetime="03-20">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -311,11 +314,9 @@
         </li>
 
         <li class="item project6 project6-img">
-          <div class="project6__tag">#ретушь</div>
-          <div class="project-text">Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются
-            уделом либералов...</div>
-          <div class="project-text1024">Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются
-            уделом либералов...</div>
+          <span class="project6__tag">#ретушь</span>
+          <p class="project-text project6__text">Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются
+            уделом либералов...</p>
           <time class="project6__date" datetime="03-09">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_41399_325)">
@@ -334,11 +335,9 @@
         </li>
 
         <li class="item project7 project7-img">
-          <div class="project7__tag">#портрет</div>
-          <div class="project-text">С&nbsp;учётом сложившейся международной обстановки, новая модель
-            организационной...</div>
-          <div class="project-text1024">С&nbsp;учётом сложившейся международной обстановки, новая модель
-            организационной...</div>
+          <span class="project7__tag">#портрет</span>
+          <p class="project-text project7__text">С&nbsp;учётом сложившейся международной обстановки, новая модель
+            организационной...</p>
           <time class="project7__date" datetime="03-01">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_41399_325)">
@@ -356,9 +355,9 @@
           </time>
         </li>
       </ul>
-    </div>
+    </section>
 
-    <div class="container contacts-box container-mobile">
+    <section class="container contacts-box container-mobile">
       <h2 class="contacts-heading">Контакты</h2>
       <ul class="contacts grid3 list-reset">
         <li class="contacts__item1 flex">
@@ -408,7 +407,7 @@
           </div>
         </li>
       </ul>
-    </div>
+    </section>
   </main>
   <footer class="footer footer-container">
     <div class="container footer__box flex">
@@ -420,10 +419,11 @@
         </div>
         <p class="left-descr">Фотостудия High pass<sup class="reg">&reg;</sup> 2018&ndash;2020</p>
       </div>
-      <div class="footer__center">
-        Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь снять завтра.
-        &copy;&nbsp;Имоджен Каннингем
-      </div>
+      <blockquote class="footer__center">
+        <p>Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь снять завтра.</p>
+        <footer>&copy;&nbsp;Имоджен Каннингем</footer>
+      </blockquote>
+
       <div class="footer__right">
         <p class="footer__right-descr">Больше интересного:</p>
         <div class="footer-social flex">

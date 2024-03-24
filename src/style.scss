@@ -282,11 +282,11 @@ body {
 }
 
 .main__container {
-  margin: 0 auto;
-  max-width: 1920px;
-  min-height: 500px;
+  // margin: 0 auto;
+  // max-width: 1920px;
+  // min-height: 500px;
   background-color: #202020;
-  align-items: center;
+  // align-items: center;
 }
 
 /* Секция фотографии */
@@ -601,19 +601,19 @@ body {
   margin-bottom: 13px;
 }
 
-.project-text1024 {
-  visibility: hidden;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 98px;
-  color: #202020;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  margin-bottom: 17px;
-}
+// .project-text1024 {
+//   visibility: hidden;
+//   margin: 0;
+//   padding: 0;
+//   position: relative;
+//   top: 98px;
+//   color: #202020;
+//   font-family: Roboto;
+//   font-size: 16px;
+//   font-weight: 400;
+//   line-height: 22px;
+//   margin-bottom: 17px;
+// }
 
 .project1__date {
   color: #999;
@@ -1243,7 +1243,7 @@ body {
   }
 
   .main__container {
-    max-width: 1024px;
+    // max-width: 1024px;
     min-height: 658px;
   }
 
@@ -1430,9 +1430,6 @@ body {
 
   /* footer */
 
-  .footer-container {
-    max-width: 1024px;
-  }
 
   .footer__img {
     width: 166px;
@@ -1593,7 +1590,7 @@ body {
   }
 
   .main__container {
-    max-width: 768px;
+    // max-width: 768px;
     min-height: 884px;
   }
 
@@ -1721,6 +1718,7 @@ body {
     margin: 0 auto;
     padding: 0 21px;
     max-width: 576px;
+    flex-direction: column;
   }
 
   .header__img {

@@ -97,7 +97,6 @@ body {
 }
 
 .container {
-  position: relative;
   max-width: 1290px;
   margin: 0 auto;
   height: 100%;
@@ -105,8 +104,6 @@ body {
 
 .header-container {
   margin: 0 auto;
-  margin-bottom: 41px;
-  max-width: 1920px;
   min-height: 80px;
   background-color: #202020;
   align-items: center;
@@ -168,6 +165,7 @@ body {
 
 .header__nav {
   margin-right: 193px;
+  flex-wrap: wrap;
 }
 
 .header320-list {

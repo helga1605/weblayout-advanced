@@ -1,18 +1,15 @@
 main {
   background-color: #FFF;
+  padding-top: 41px;
 }
 
 .main__container {
-  margin: 0 auto;
-  max-width: 1920px;
-  min-height: 500px;
   background-color: #202020;
-  align-items: center;
 }
 
 /* Секция фотографии */
 .photo {
-  margin-bottom: 68px;
+  padding-bottom: 68px;
 }
 
 .photo__article {
@@ -21,7 +18,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  min-height: 630px;
 }
 
 .photo__article-tag {
@@ -62,6 +59,7 @@ main {
   font-weight: 700;
   line-height: 104%;
   max-width: 427px;
+  min-height: 75px;
   margin-bottom: 19px;
 }
 
@@ -140,13 +138,8 @@ main {
 
 /* О студии */
 .about {
-  padding-top: 63px;
-  margin-bottom: 68px;
-}
-
-.about__text {
-  position: relative;
-  top: -25px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .about__title {
@@ -164,22 +157,21 @@ main {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+  margin-right: 31px;
+}
+
+.about__section {
+  padding-top: 35px;
 }
 
 .about__list {
   margin: 0;
-  display: grid;
-  grid-template-columns: 474px 126px;
-  grid-template-rows: 255px 50px;
-  grid-gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__item1 {
-  background-image: url(/img/about_us_photo.jpg);
-}
-
-.about__item:first-child {
-  grid-column: 1/3;
+  margin-bottom: 25px;
 }
 
 .subscribe {
@@ -205,6 +197,7 @@ main {
   font-weight: 400;
   width: 474px;
   border: none;
+  margin-right: 30px;
 }
 
 .subscribe-mail:hover::-moz-placeholder {
@@ -244,7 +237,8 @@ main {
 
 /* Наши проекты */
 .projects {
-  margin-bottom: 68px;
+  padding-top: 68px;
+  padding-bottom: 34px;
 }
 
 .project-title {
@@ -270,7 +264,6 @@ main {
 }
 
 .about__btn {
-  margin-top: 40px;
   outline: none;
   font-family: Roboto;
   padding: 15px 22px;
@@ -285,6 +278,7 @@ main {
   background-size: 190px 184px;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
 }
 
 .project1-img {
@@ -300,9 +294,9 @@ main {
 }
 
 .project-tag {
-  position: relative;
+  position: absolute;
   top: 7px;
-  left: 94px;
+  right: 7px;
   background-color: #202020;
   padding: 6px 14px;
   color: #FFF;
@@ -311,14 +305,27 @@ main {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  word-wrap: break-word;
+}
+
+.project1-tag {
+  max-width: 86px;
+}
+
+.project2-tag {
   max-width: 89px;
 }
 
 .project-text {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
   position: relative;
-  top: 178px;
+  top: 198px;
   color: #202020;
   font-family: Roboto;
   font-size: 16px;
@@ -327,19 +334,6 @@ main {
   margin-bottom: 13px;
 }
 
-.project-text1024 {
-  visibility: hidden;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 98px;
-  color: #202020;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  margin-bottom: 17px;
-}
 
 .project1__date {
   color: #999;
@@ -348,7 +342,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 115px;
+  top: 195px;
 }
 
 .project2__date {
@@ -358,7 +352,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 115px;
+  top: 195px;
 }
 
 .project3__date {
@@ -368,7 +362,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 28px;
+  top: 195px;
 }
 
 .project4__date {
@@ -378,7 +372,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  bottom: 10px;
+  bottom: 2px;
   margin-bottom: 2px;
 }
 
@@ -529,6 +523,10 @@ main {
   max-width: 85px;
 }
 
+.project6__text {
+  top: 188px;
+}
+
 .project6__date {
   color: #999;
   font-family: Roboto;
@@ -536,7 +534,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 97px;
+  top: 187px;
 }
 
 .project7-img {
@@ -561,6 +559,10 @@ main {
   max-width: 89px;
 }
 
+.project7__text {
+  top: 188px;
+}
+
 .project7__date {
   color: #999;
   font-family: Roboto;
@@ -568,12 +570,13 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 97px;
+  top: 187px;
 }
 
 /* Контакты */
 .contacts-box {
-  margin-bottom: 69px;
+  padding-top: 34px;
+  padding-bottom: 68px;
 }
 
 .grid3 {
@@ -744,12 +747,10 @@ main {
 }
 
 /* footer */
+
 .footer-container {
   background-color: #202020;
-  min-height: 106px;
-  margin: 0 auto;
-  max-width: 1920px;
-  padding-top: 24px;
+  padding: 26px 0 16px 0;
 }
 
 .footer__box {
@@ -781,6 +782,8 @@ main {
 }
 
 .footer__center {
+  margin: 0;
+  padding: 0;
   color: #CACACA;
   font-family: Roboto;
   font-size: 16px;
@@ -865,8 +868,7 @@ main {
   }
   .header-container {
     margin: 0 auto;
-    margin-bottom: 34px;
-    max-width: 1024px;
+    /* max-width: 1024px; */
   }
   .header__img {
     margin-right: 82px;
@@ -882,11 +884,14 @@ main {
   .container {
     max-width: 964px;
   }
-  .photo {
-    margin-bottom: 72px;
+
+  .main {
+    padding-top: 34px;
   }
+
   .photo__article {
     background-image: url(/img/master-class1024.jpg);
+    min-height: 100%;
   }
   .photo__item1 {
     background-image: url(/img/item1_1024.jpg);
@@ -928,34 +933,38 @@ main {
     max-width: 408px;
     margin-bottom: 22px;
   }
+
+  .about__text {
+    max-width: 468px;
+    margin-right: 30px;
+  }
+
+  .about__descr {
+    margin-right: 0;
+  }
+
   .about__list {
-    margin: 0;
-    display: grid;
-    grid-template-columns: 466px;
-    grid-template-rows: 332px 50px 50px;
-    grid-gap: 20px;
+    flex-wrap: wrap;
   }
-  .about__item1 {
-    background-image: url(/img/about_us_photo_1024.jpg);
-  }
-  .about__item:first-child {
-    grid-column: 1/2;
+
+  .subscribe-form {
+    display: flex;
+    max-width: 372px;
+    flex-wrap: wrap;
   }
   .subscribe-mail {
     width: 342px;
     margin-bottom: 20px;
   }
   .main__container {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     min-height: 658px;
   }
   .item {
     min-height: 307px;
   }
   /* projects */
-  .projects {
-    margin-bottom: 64px;
-  }
+
   .project1-img {
     background-image: url(/img/gory_i_sonce_1024.png);
     background-size: 218px 184px;
@@ -969,11 +978,19 @@ main {
     background-size: 466px 184px;
   }
   .project-text {
-    visibility: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    top: 198px;
+    margin-bottom: 17px;
   }
-  .project-text1024 {
-    visibility: visible;
+
+  .project1__text {
+    max-width: 210px;
   }
+
   .project3__text1024 {
     top: 144px;
   }
@@ -991,22 +1008,24 @@ main {
   }
   .project3__tag {
     left: 365px;
+    max-width: 93px;
   }
+
   .project1__date {
-    top: 103px;
+    top: 190px;
   }
   .project2__date {
-    top: 103px;
+    top: 190px;
   }
   .project3__date {
-    top: 148px;
+    top: 190px;
   }
   .project4-img {
     background-image: url(/img/girl1024.jpg);
     background-size: 590px 307px;
   }
   .project4__tag {
-    left: 500px;
+    left: 530px;
   }
   .project4__date {
     bottom: -3px;
@@ -1026,6 +1045,16 @@ main {
   .project6__tag {
     left: 249px;
   }
+
+  .project6__text {
+    top: 185px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
   .project7-img {
     background-image: url(/img/project7_1024.png);
     background-size: 342px 184px;
@@ -1033,10 +1062,19 @@ main {
   .project7__tag {
     left: 246px;
   }
-  /* contacts */
-  .contacts-box {
-    margin-bottom: 65px;
+
+  .project7__text {
+    top: 188px;
+    max-width: 342px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
+
+  /* contacts */
+
   .contacts__item1 {
     background-image: url(/img/bigmap1024.jpg);
     max-width: 590px;
@@ -1091,9 +1129,7 @@ main {
     left: 520px;
   }
   /* footer */
-  .footer-container {
-    max-width: 1024px;
-  }
+
   .footer__img {
     width: 166px;
     min-height: 27px;
@@ -1151,7 +1187,6 @@ main {
     max-width: 768px;
     min-height: 45px;
     align-items: center;
-    margin-bottom: 36px;
   }
   .header768__nav {
     margin: 0 auto;
@@ -1169,9 +1204,6 @@ main {
   }
   .container {
     max-width: 714px;
-  }
-  .photo {
-    margin-bottom: 72px;
   }
   .photo__article {
     background-image: url(/img/master-class768.jpg);
@@ -1209,18 +1241,16 @@ main {
     margin-bottom: 17px;
     font-size: 22px;
   }
-  .about__list {
-    grid-template-columns: 342px;
-    grid-template-rows: 569px 50px 50px;
-    grid-gap: 20px;
+
+  .about__section {
+    min-width: 342px;
   }
-  .about__item1 {
-    background-image: url(/img/about_us_photo_768.jpg);
-  }
+
   .main__container {
-    max-width: 768px;
+    /* max-width: 768px; */
     min-height: 884px;
   }
+
   .project1-img {
     background-image: url(/img/gory_i_sonce_768.png);
   }
@@ -1234,34 +1264,67 @@ main {
   .project-text {
     visibility: visible;
   }
-  .project-text1024 {
-    visibility: hidden;
+
+  .project1__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    top: 198px;
   }
+
+  .project2__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    top: 198px;
+  }
+
   .project1__date {
-    top: 115px;
+    top: 190px;
   }
   .project2__date {
-    top: 115px;
+    top: 190px;
   }
   .project3__tag {
     left: 118px;
   }
   .project3__date {
-    top: 68px;
+    top: 212px;
   }
   .project4-img {
     background-image: url(/img/girl768.png);
     background-size: 714px 300px;
   }
+
+  .project-wrapper {
+    max-width: 292px;
+    top: 18px;
+  }
+
+  .project4__date {
+    bottom: 0;
+  }
+
   .project4__descr {
     margin-bottom: 47px;
   }
   .project4__tag {
-    left: 621px;
+    left: 650px;
+    top: 12px;
   }
   .project6__tag {
-    left: 250px;
+    left: 253px;
+    top: 12px;
   }
+
+  .project7__tag {
+    top: 12px;
+  }
+
   .project5__tag {
     top: 13px;
     left: 563px;
@@ -1311,13 +1374,17 @@ main {
     gap: 25px;
   }
   .header-container {
-    max-width: 576px;
+    /* max-width: 576px; */
     min-height: 70px;
   }
   .container {
     margin: 0 auto;
     padding: 0 21px;
     max-width: 576px;
+  }
+
+  .cont-320 {
+    flex-direction: column;
   }
   .header__img {
     width: 112px;
@@ -1328,7 +1395,6 @@ main {
     max-width: 576px;
     padding-left: 21px;
     padding-right: 21px;
-    margin-bottom: 30px;
   }
   .burger {
     position: relative;
@@ -1345,6 +1411,7 @@ main {
   }
   .header768__list {
     visibility: hidden;
+    max-width: 278px;
   }
   .header__form {
     width: 287px;
@@ -1452,18 +1519,18 @@ main {
     background-size: 124px;
   }
   .photo {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
   .main__container {
     min-height: 1282px;
   }
   .about__text {
-    grid-column: 1/3;
     max-width: 278px;
     min-height: 704px;
+    margin-right: 0;
+    margin-bottom: 18px;
   }
   .about__title {
-    grid-column: 1/3;
     font-size: 18px;
   }
   .about__descr {
@@ -1473,6 +1540,7 @@ main {
   .about__section {
     position: relative;
     top: -35px;
+    min-width: 0;
   }
   .subscribe {
     font-size: 18px;
@@ -1483,16 +1551,10 @@ main {
     padding: 12px 23px;
     font-size: 14px;
   }
-  .about__list {
-    grid-template-columns: 278px;
-    grid-template-rows: 278px 40px 40px;
-    grid-gap: 20px;
-  }
   .about__btn {
     font-size: 14px;
   }
   .about__item1 {
-    background-image: url(/img/about_us_photo_320.jpg);
     background-size: 278px 278px;
     background-repeat: no-repeat;
   }
@@ -1511,7 +1573,7 @@ main {
     padding: 4px 14px;
   }
   .project1__tag {
-    left: 194px;
+    left: 193px;
     max-width: 78px;
   }
   .project1-img {
@@ -1521,17 +1583,34 @@ main {
   .project-text {
     margin-bottom: 10px;
   }
+
+  .project1__text {
+    -webkit-line-clamp: 2;
+    top: 198px;
+    max-width: 100%;
+  }
+
+  .project2__text {
+    -webkit-line-clamp: 2;
+    top: 198px;
+    max-width: 100%;
+  }
+
   .project2__tag {
     top: 4px;
-    left: 193px;
+    left: 190px;
     max-width: 80px;
   }
   .project2-img {
     background-image: url(/img/man_z_borodoy_320.jpg);
     background-size: 278px 184px;
   }
+
+  .project2__date {
+    top: 205px;
+  }
   .project3__tag {
-    left: 190px;
+    left: 187px;
     max-width: 84px;
   }
   .project3-img {
@@ -1541,7 +1620,7 @@ main {
     background-size: 278px 184px;
   }
   .project3__date {
-    top: 95px;
+    top: 197px;
   }
   .project-wrapper {
     max-width: 218px;
@@ -1558,7 +1637,7 @@ main {
   }
   .project4__tag {
     left: 221px;
-    top: 4px;
+    top: 5px;
     max-width: 52px;
   }
   .project4__date {
@@ -1583,14 +1662,14 @@ main {
     top: -40px;
   }
   .project6__tag {
-    top: 2px;
+    top: 5px;
     left: 195px;
     padding: 4px 14px;
     font-size: 12px;
     max-width: 77px;
   }
   .project1__date {
-    top: 115px;
+    top: 220px;
   }
   .project7 {
     position: relative;
@@ -1601,7 +1680,7 @@ main {
     background-size: 278px 184px;
   }
   .project7__tag {
-    top: 5px;
+    top: 8px;
     left: 195px;
     padding: 4px 14px;
     font-size: 12px;
@@ -1707,6 +1786,7 @@ main {
   .footer-container {
     padding-top: 31px;
     min-height: 123px;
+    padding-bottom: 0;
   }
   .footer__left {
     display: none;
