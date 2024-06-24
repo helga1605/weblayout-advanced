@@ -1,6 +1,5 @@
 main {
   background-color: #FFF;
-  padding-top: 41px;
 }
 
 .main__container {
@@ -9,22 +8,27 @@ main {
 
 /* Секция фотографии */
 .photo {
+  padding-top: 41px;
   padding-bottom: 68px;
 }
 
 .photo__article {
   flex: 1;
-  background-image: url(/img/master-class.jpg);
+  background-image: url(../img/master-class.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 630px;
+  position: relative;
+  padding: 60px;
+  display: grid;
+  grid-column: span 6;
+  align-items: end;
 }
 
 .photo__article-tag {
-  position: relative;
+  position: absolute;
   top: 15px;
-  left: 492px;
+  right: 15px;
   background-color: #202020;
   padding: 7px 15px;
   color: #FFF;
@@ -33,19 +37,13 @@ main {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  max-width: 123px;
-}
-
-.photo__article-wrapper {
-  position: relative;
-  left: 59px;
-  top: 378px;
+  max-width: 125px;
+  word-wrap: break-word;
 }
 
 .photo__article-descr {
   margin: 0;
   color: #FFF;
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 3px;
@@ -71,6 +69,8 @@ main {
   font-style: normal;
   font-weight: 700;
   padding: 15px 22px;
+  max-width: 159px;
+  word-wrap: break-word;
 }
 
 .orange-btn:focus-visible {
@@ -89,6 +89,12 @@ main {
   border: none;
 }
 
+.photo__section {
+  grid-column: span 6;
+  display: grid;
+  overflow: auto;
+}
+
 .photo__title {
   margin: 0;
   margin-bottom: 18px;
@@ -101,15 +107,15 @@ main {
 
 .grid2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 30px;
-  position: relative;
+  width: 100%;
+  align-content: start;
 }
 
 .photo__list {
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 298px 257px;
   grid-gap: 30px;
 }
@@ -120,20 +126,22 @@ main {
   background-position: center;
 }
 
-.photo__item:first-child {
-  grid-column: 1/3;
-}
-
 .photo__item1 {
-  background-image: url(/img/item1.jpg);
+  background-image: url(../img/item1.jpg);
+  grid-column: span 6;
+  grid-row: 1;
 }
 
 .photo__item2 {
-  background-image: url(/img/item2.jpg);
+  background-image: url(../img/item2.jpg);
+  grid-column: span 3;
+  grid-row: 2;
 }
 
 .photo__item3 {
-  background-image: url(/img/item3.jpg);
+  background-image: url(../img/item3.jpg);
+  grid-column: span 3;
+  grid-row: 2;
 }
 
 /* О студии */
@@ -141,6 +149,11 @@ main {
   padding-top: 30px;
   padding-bottom: 50px;
 }
+
+.about__text {
+  gap: 30px;
+}
+
 
 .about__title {
   margin: 0;
@@ -157,11 +170,8 @@ main {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  margin-right: 31px;
-}
-
-.about__section {
-  padding-top: 35px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .about__list {
@@ -181,6 +191,7 @@ main {
   font-size: 24px;
   font-weight: 400;
   line-height: 22px;
+  word-wrap: break-word;
 }
 
 .form-input {
@@ -332,6 +343,11 @@ main {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 13px;
+  word-wrap: break-word;
+}
+
+.project2__text {
+  max-width: 190px;
 }
 
 
@@ -386,9 +402,9 @@ main {
 }
 
 .project4__tag {
-  position: relative;
+  position: absolute;
   top: 7px;
-  left: 567px;
+  right: 7px;
   background-color: #202020;
   padding: 6px 14px;
   color: #FFF;
@@ -399,9 +415,11 @@ main {
   max-width: 56px;
 }
 
+.project4 {
+  padding: 22px 0 30px 30px;
+}
+
 .project-wrapper {
-  position: relative;
-  left: 30px;
   max-width: 292px;
 }
 
@@ -421,6 +439,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 54px;
+  overflow: hidden;
 }
 
 .project-btn {
@@ -458,10 +477,14 @@ main {
   position: relative;
 }
 
+.project5 {
+  padding: 22px 0 30px 30px;
+}
+
 .project5__tag {
-  position: relative;
-  top: 13px;
-  left: 479px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
   background-color: #202020;
   padding: 6px 14px;
   color: #FFF;
@@ -478,8 +501,6 @@ main {
   font-size: 12px;
   font-weight: 400;
   line-height: 22px;
-  position: relative;
-  bottom: 10px;
   margin-bottom: 2px;
 }
 
@@ -501,6 +522,10 @@ main {
   margin-bottom: 100px;
 }
 
+.project6 {
+  position: relative;
+}
+
 .project6-img {
   flex: 1;
   background-image: url(/img/project6.png);
@@ -510,9 +535,9 @@ main {
 }
 
 .project6__tag {
-  position: relative;
+  position: absolute;
   top: 7px;
-  left: 208px;
+  right: 7px;
   background-color: #202020;
   padding: 6px 14px;
   color: #FFF;
@@ -524,7 +549,8 @@ main {
 }
 
 .project6__text {
-  top: 188px;
+  top: 208px;
+  max-width: 300px;
 }
 
 .project6__date {
@@ -534,7 +560,11 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 187px;
+  top: 207px;
+}
+
+.project7 {
+  position: relative;
 }
 
 .project7-img {
@@ -546,9 +576,9 @@ main {
 }
 
 .project7__tag {
-  position: relative;
+  position: absolute;
   top: 7px;
-  left: 204px;
+  right: 7px;
   background-color: #202020;
   padding: 6px 14px;
   color: #FFF;
@@ -560,7 +590,8 @@ main {
 }
 
 .project7__text {
-  top: 188px;
+  top: 208px;
+  min-width: 300px;
 }
 
 .project7__date {
@@ -570,7 +601,7 @@ main {
   font-weight: 400;
   line-height: 22px;
   position: relative;
-  top: 187px;
+  top: 207px;
 }
 
 /* Контакты */
@@ -587,31 +618,24 @@ main {
 }
 
 .close {
-  position: relative;
-  top: -135px;
-  left: 320px;
+  position: absolute;
+  top: 20px;
+  left: 370px;
 }
 
 .contacts__item1 {
   position: relative;
-  background-image: url(/img/bigmap.jpg);
-  background-size: cover;
+  background-image: url(../img/bigmap.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 850px;
-}
-
-.contacts__item2 {
-  max-width: 410px;
 }
 
 .contacts__cts {
   max-width: 410px;
   background-color: rgba(32, 32, 32, 0.85);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  padding: 150px 50px 150px 60px;
+  padding: 135px 50px 135px 60px;
 }
 
 .contacts-heading {
@@ -651,9 +675,9 @@ main {
 }
 
 .map-point {
-  position: relative;
-  top: -200px;
-  left: 375px;
+  position: absolute;
+  top: 95px;
+  left: 610px;
 }
 
 .contacts__form-title {
@@ -868,7 +892,6 @@ main {
   }
   .header-container {
     margin: 0 auto;
-    /* max-width: 1024px; */
   }
   .header__img {
     margin-right: 82px;
@@ -885,33 +908,48 @@ main {
     max-width: 964px;
   }
 
-  .main {
-    padding-top: 34px;
+  .photo {
+    height: fit-content;
+    padding-bottom: 68px;
+  }
+
+  .grid2 {
+    grid-template-columns: repeat(8, 1fr);
   }
 
   .photo__article {
-    background-image: url(/img/master-class1024.jpg);
-    min-height: 100%;
+    background-image: url(../img/master-class1024.jpg);
+    background-size: unset;
+    background-position: top;
+    grid-column: span 4;
+    padding: 0 30px 30px;
   }
+
+  .photo__title {
+    margin-bottom: 25px;
+  }
+
   .photo__item1 {
-    background-image: url(/img/item1_1024.jpg);
+    background-image: url(../img/item1_1024.jpg);
+    grid-column: span 4;
   }
   .photo__item2 {
-    background-image: url(/img/item2_1024.jpg);
+    background-image: url(../img/item2_1024.jpg);
+    grid-column: span 2;
   }
   .photo__item3 {
-    background-image: url(/img/item3_1024.jpg);
+    background-image: url(../img/item3_1024.jpg);
+    grid-column: span 2;
   }
   .photo__list {
     grid-template-rows: 332px 186px;
     grid-gap: 30px;
   }
   .photo__article-tag {
-    position: relative;
     top: 15px;
     left: 332px;
     background-color: #202020;
-    padding: 7px 15px;
+    padding: 7px 13px;
     color: #FFF;
     text-align: center;
     font-family: Roboto;
@@ -920,27 +958,24 @@ main {
     font-weight: 400;
     max-width: 123px;
   }
-  .photo__article-wrapper {
-    left: 30px;
-    top: 390px;
-  }
+
   .photo__article-descr {
     margin-bottom: 9px;
   }
+
   .photo__article-title {
     font-size: 34px;
     line-height: 100%;
     max-width: 408px;
     margin-bottom: 22px;
   }
-
-  .about__text {
-    max-width: 468px;
-    margin-right: 30px;
+  .photo__section {
+    grid-column: span 4;
   }
 
   .about__descr {
     margin-right: 0;
+    max-width: 468px;
   }
 
   .about__list {
@@ -955,10 +990,6 @@ main {
   .subscribe-mail {
     width: 342px;
     margin-bottom: 20px;
-  }
-  .main__container {
-    /* max-width: 1024px; */
-    min-height: 658px;
   }
   .item {
     min-height: 307px;
@@ -1025,7 +1056,7 @@ main {
     background-size: 590px 307px;
   }
   .project4__tag {
-    left: 530px;
+    left: 520px;
   }
   .project4__date {
     bottom: -3px;
@@ -1076,10 +1107,10 @@ main {
   /* contacts */
 
   .contacts__item1 {
-    background-image: url(/img/bigmap1024.jpg);
-    max-width: 590px;
+    background-image: url(../img/bigmap1024.jpg);
     grid-column: 1/6;
   }
+
   .contacts__item2 {
     grid-column: 6/9;
   }
@@ -1098,35 +1129,28 @@ main {
   .contacts__cts {
     max-width: 590px;
     max-height: 157px;
-    background-position: bottom;
     padding: 25px 260px 25px 30px;
     position: relative;
     top: 307px;
-  }
-  .contacts__title {
-    position: relative;
-    bottom: 30px;
   }
   .contacts__descr {
     display: inline-block;
     margin: 0;
     padding: 0;
-    position: relative;
-    bottom: 30px;
   }
   .contacts__phone-number {
     display: inline-block;
     position: relative;
-    bottom: 58px;
+    bottom: 30px;
     left: 150px;
   }
   .map-point {
-    top: -370px;
-    left: 280px;
+    top: -215px;
+    left: 479px;
   }
   .close {
-    top: -5px;
-    left: 520px;
+    top: 15px;
+    left: 550px;
   }
   /* footer */
 
@@ -1205,12 +1229,15 @@ main {
   .container {
     max-width: 714px;
   }
-  .photo__article {
-    background-image: url(/img/master-class768.jpg);
+
+  .grid2 {
+    grid-template-columns: repeat(6, 1fr);
   }
-  .photo__article-wrapper {
-    left: 28px;
-    top: 200px;
+
+  .photo__article {
+    background-image: url(../img/master-class768.jpg);
+    padding: 0 75px 30px 30px;
+    grid-column: span 3;
   }
   .photo__article-descr {
     margin-bottom: 14px;
@@ -1223,14 +1250,22 @@ main {
   .photo__article-tag {
     left: 204px;
   }
+
+  .photo__section {
+    grid-column: span 3;
+  }
+
   .photo__item1 {
-    background-image: url(/img/item1_768.jpg);
+    background-image: url(../img/item1_768.jpg);
+    grid-column: span 2;
   }
   .photo__item2 {
-    background-image: url(/img/item2_768.jpg);
+    background-image: url(../img/item2_768.jpg);
+    grid-column: span 1;
   }
   .photo__item3 {
-    background-image: url(/img/item3_768.jpg);
+    background-image: url(../img/item3_768.jpg);
+    grid-column: span 1;
   }
   .photo__list {
     grid-template-rows: 228px 133px;
@@ -1247,7 +1282,6 @@ main {
   }
 
   .main__container {
-    /* max-width: 768px; */
     min-height: 884px;
   }
 
@@ -1333,7 +1367,7 @@ main {
     grid-template-columns: repeat(6, 1fr);
   }
   .contacts__item1 {
-    background-image: url(/img/bigmap768.jpg);
+    background-image: url(../img/bigmap768.jpg);
     max-width: 714px;
     min-height: 460px;
     grid-column: 1/-1;
@@ -1348,17 +1382,17 @@ main {
     top: 307px;
   }
   .close {
-    top: -5px;
-    left: 644px;
+    top: 15px;
+    left: 674px;
   }
   .contacts__phone-number {
     display: block;
-    bottom: 32px;
+    bottom: 2px;
     left: 0px;
   }
   .map-point {
-    top: -375px;
-    left: 454px;
+    top: -215px;
+    left: 490px;
   }
   .contacts__item2 {
     max-width: 466px;
@@ -1368,13 +1402,35 @@ main {
   }
 }
 @media (max-width: 576px) {
+
   .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    grid-template-columns: 125px 125px;
+    gap: 30px;
   }
+
+  .item:nth-child(1) {
+    grid-column: span 2;
+  }
+  .item:nth-child(2) {
+    grid-column: span 2;
+  }
+  .item:nth-child(3) {
+    grid-column: span 2;
+  }
+  .item:nth-child(4) {
+    grid-column: span 2;
+  }
+  .item:nth-child(5) {
+    grid-column: span 2;
+  }
+  .item:nth-child(6) {
+    grid-column: span 2;
+  }
+  .item:nth-child(7) {
+    grid-column: span 2;
+  }
+
   .header-container {
-    /* max-width: 576px; */
     min-height: 70px;
   }
   .container {
@@ -1396,6 +1452,7 @@ main {
     padding-left: 21px;
     padding-right: 21px;
   }
+
   .burger {
     position: relative;
     display: inline-block;
@@ -1410,7 +1467,7 @@ main {
     visibility: hidden;
   }
   .header768__list {
-    visibility: hidden;
+    display: none;
     max-width: 278px;
   }
   .header__form {
@@ -1426,7 +1483,7 @@ main {
     flex-direction: column;
     position: absolute;
     top: -13px;
-    left: -21px;
+    left: -150px;
     bottom: 0;
     background-color: #202020;
     padding-left: 21px;
@@ -1459,18 +1516,25 @@ main {
     margin-right: 0;
     margin-bottom: 30px;
   }
+
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .photo__article {
-    grid-column: 1/3;
-    background-image: url(/img/master-class320.jpg);
+    grid-column: 1/-1;
+    background-image: url(../img/master-class320.jpg);
     background-size: 278px;
     min-height: 422px;
   }
+
   .photo__article-wrapper {
     left: 29px;
     top: 210px;
   }
+
   .photo__article-tag {
-    left: 177px;
+    left: 169px;
     top: 6px;
     padding: 4px 7px;
     font-size: 12px;
@@ -1491,8 +1555,7 @@ main {
     padding: 13px 22px;
   }
   .photo__section {
-    display: grid;
-    grid-column: 1/3;
+    grid-column: 1/-1;
     justify-content: center;
   }
   .photo__title {
@@ -1519,16 +1582,17 @@ main {
     background-size: 124px;
   }
   .photo {
+    padding-top: 30px;
     padding-bottom: 50px;
   }
   .main__container {
-    min-height: 1282px;
+    padding-bottom: 60px;
   }
   .about__text {
+    flex-direction: column;
     max-width: 278px;
     min-height: 704px;
     margin-right: 0;
-    margin-bottom: 18px;
   }
   .about__title {
     font-size: 18px;
@@ -1539,7 +1603,7 @@ main {
   }
   .about__section {
     position: relative;
-    top: -35px;
+    top: -12px;
     min-width: 0;
   }
   .subscribe {
@@ -1577,7 +1641,7 @@ main {
     max-width: 78px;
   }
   .project1-img {
-    background-image: url(/img/gory_i_solnce_320.jpg);
+    background-image: url(../img/gory_i_solnce_320.jpg);
     background-size: 278px 184px;
   }
   .project-text {
@@ -1602,7 +1666,7 @@ main {
     max-width: 80px;
   }
   .project2-img {
-    background-image: url(/img/man_z_borodoy_320.jpg);
+    background-image: url(../img/man_z_borodoy_320.jpg);
     background-size: 278px 184px;
   }
 
@@ -1616,13 +1680,14 @@ main {
   .project3-img {
     position: relative;
     top: -16px;
-    background-image: url(/img/chainiki_320.jpg);
+    background-image: url(../img/chainiki_320.jpg);
     background-size: 278px 184px;
   }
   .project3__date {
     top: 197px;
   }
   .project-wrapper {
+    position: relative;
     max-width: 218px;
     top: 170px;
   }
@@ -1632,7 +1697,7 @@ main {
     min-height: 422px;
   }
   .project4-img {
-    background-image: url(/img/girl320.jpg);
+    background-image: url(../img/girl320.jpg);
     background-size: 278px 422px;
   }
   .project4__tag {
@@ -1668,6 +1733,16 @@ main {
     font-size: 12px;
     max-width: 77px;
   }
+
+  .project6__text {
+    position: relative;
+    top: 200px;
+  }
+
+  .project6__date {
+    top: 208px;
+  }
+
   .project1__date {
     top: 220px;
   }
@@ -1676,7 +1751,7 @@ main {
     top: -40px;
   }
   .project7-img {
-    background-image: url(/img/project7_320.jpg);
+    background-image: url(../img/project7_320.jpg);
     background-size: 278px 184px;
   }
   .project7__tag {
@@ -1686,12 +1761,18 @@ main {
     font-size: 12px;
     max-width: 80px;
   }
+
+  .project7__text {
+    position: relative;
+    top: 200px;
+  }
+
   .project5 {
     position: relative;
     top: -40px;
   }
   .project5-img {
-    background-image: url(/img/zabvenie320.jpg);
+    background-image: url(../img/zabvenie320.jpg);
     max-width: 278px;
     min-height: 422px;
   }
@@ -1720,7 +1801,7 @@ main {
     padding: 0;
   }
   .contacts__item1 {
-    background-image: url(/img/bigmap320.jpg);
+    background-image: url(../img/bigmap320.jpg);
     background-size: 320px 472px;
   }
   .contacts-heading {
@@ -1740,12 +1821,12 @@ main {
     top: 307px;
   }
   .close {
-    top: -9px;
-    left: 260px;
+    top: 16px;
+    left: 284px;
   }
   .map-point {
-    top: -396px;
-    left: 245px;
+    top: -226px;
+    left: 262px;
   }
   .contacts__title {
     font-size: 18px;

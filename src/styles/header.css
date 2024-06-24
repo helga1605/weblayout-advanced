@@ -99,14 +99,13 @@ body {
 .container {
   max-width: 1290px;
   margin: 0 auto;
-  height: 100%;
 }
 
 .header-container {
-  margin: 0 auto;
   min-height: 80px;
   background-color: #202020;
   align-items: center;
+  padding: 24px 0;
 }
 
 .header-box {
@@ -115,6 +114,10 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
+}
+
+.header__list {
+  flex-wrap: wrap;
 }
 
 .header__img {
