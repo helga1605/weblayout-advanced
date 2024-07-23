@@ -97,8 +97,9 @@ body {
 }
 
 .container {
-  max-width: 1290px;
+  max-width: 1350px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 .header-container {
@@ -113,7 +114,6 @@ body {
   padding: 0;
   align-items: center;
   justify-content: space-between;
-  flex-shrink: 0;
 }
 
 .header__list {
