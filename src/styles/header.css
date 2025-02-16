@@ -97,7 +97,7 @@ body {
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 70.3vw;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -121,7 +121,7 @@ body {
 }
 
 .header__img {
-  margin-right: 140px;
+  margin-right: 7.3vw;
   outline: 0;
   height: auto;
   width: 190px;
@@ -167,7 +167,7 @@ body {
 }
 
 .header__nav {
-  margin-right: 193px;
+  margin-right: 10vw;
   flex-wrap: wrap;
 }
 
@@ -184,7 +184,7 @@ body {
 }
 
 .header__item:not(:last-child) {
-  margin-right: 79px;
+  margin-right: 4.11vw;
 }
 
 .header-link:hover {
